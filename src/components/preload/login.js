@@ -20,13 +20,13 @@ const Login = () => {
         const password = pass.current.children[1].children[0].value;
 
         if (!email || !password) {
-            console.log('Por favor preencha todos os campos!');
+            alert('Por favor preencha todos os campos!');
         } else if (password.length < 8) {
-            console.log('Senha muito curta! Precisa de 8 caracteres ou mais');
+            alert('Senha muito curta! Precisa de 8 caracteres ou mais');
         } else if ((email !== data.email && email !== data.user) && password !== data.password) {
-            console.log('Usuário não registrado');
+            alert('Usuário não registrado');
         } else if ((email !== data.email && email !== data.user) || password !== data.password) {
-            console.log('Senha incorreta');
+            alert('Senha incorreta');
         }
         else{
             store.dispatch(changeUser(data.user, data.email, data.password))

@@ -21,11 +21,11 @@ const Register = () => {
         const password = pass.current.children[1].children[0].value;
 
         if (name === data.user || mail === data.email) {
-            console.log('Usuário já registrado')
+            alert('Usuário já registrado')
         } else if (!mail || !password || !name) {
-            console.log('Por favor preencha todos os campos!');
+            alert('Por favor preencha todos os campos!');
         } else if (password.length < 8) {
-            console.log('Senha muito curta! Precisa de 8 caracteres ou mais');
+            alert('Senha muito curta! Precisa de 8 caracteres ou mais');
         } else {
             store.dispatch(registerUser(name, mail, password));
             navigate('../dashboard', { replace: true });
