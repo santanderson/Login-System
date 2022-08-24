@@ -1,5 +1,3 @@
-const redux = require('redux');
-
 //User actions
 const REGISTER_USER = "REGISTER_USER";
 const CHANGE_USER = "CHANGE_USER";
